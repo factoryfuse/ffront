@@ -22,7 +22,7 @@ export default function Dashboard() {
         setName(user.name);
         setEmail(user.email);
     };
-
+//koray
     useEffect(() => {
         InitDashboard();
     });
