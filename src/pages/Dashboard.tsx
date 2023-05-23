@@ -26,7 +26,7 @@ export default function Dashboard() {
     useEffect(() => {
         InitDashboard();
     });
-
+//koraaaaaaaaay
     return (
         <>
             <h1 className='spaced-text'>FACTORY FUSE Dashboard</h1>
