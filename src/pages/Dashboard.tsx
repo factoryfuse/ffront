@@ -1,8 +1,13 @@
 import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Dashboard.scss'
-import { TextField } from '@mui/material'
+import { TextField, Box, Toolbar, IconButton, Typography } from '@mui/material'
+import AppBar from '../comps/AppBar';
 import axios from 'axios';
+import UploadButton from '../comps/UploadButton';
+import ViewContainer from '../comps/ViewContainer';
+import DashboardGrid from '../comps/DashboardGrid';
+
 
 export default function Dashboard() {
     const [name, setName] = React.useState('');
@@ -28,10 +33,17 @@ export default function Dashboard() {
     });
 
     return (
-        <>
-            <h1 className='spaced-text'>FACTORY FUSE Dashboard</h1>
-            <h2> I like your {session_id}, G! </h2>
-            <h2> {name} - {email} </h2>
-        </>
+        <div className="dashboard">
+            <AppBar 
+                logo_url="/simfer.png"
+                appbar_name='Preshane Planlama Modülü'
+                user_name={name} />
+
+            <div className="dashboard-grid">
+                <UploadButton dummy=''/>
+                <ViewContainer content_type='video'/>
+            </div>
+            
+        </div>
     )
 }
