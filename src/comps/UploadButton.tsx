@@ -17,6 +17,8 @@ export default function UploadButton(props: UploadButtonProps) {
             <input type="file" accept=".xlsx, .xls " className="upload-button-picker" onClick={UploadOnClick} />
 
             <button className="upload-button-button" onClick={UploadOnClick}>Run</button>
+
+            <p className="upload-button-credits">Developed by Factory Fuse Team</p>
         </div>
     );
 }

@@ -6,7 +6,6 @@ import AppBar from '../comps/AppBar';
 import axios from 'axios';
 import UploadButton from '../comps/UploadButton';
 import ViewContainer from '../comps/ViewContainer';
-import DashboardGrid from '../comps/DashboardGrid';
 
 
 export default function Dashboard() {
