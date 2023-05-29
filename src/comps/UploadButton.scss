@@ -1,0 +1,38 @@
+.upload-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.upload-button-picker {
+    padding: 1rem;
+    width: 50%;
+    border-radius: .2rem;
+    border: 2px solid #ED1F50;
+
+    font-size: medium;
+
+
+}
+
+.upload-button-button {
+    margin-top: 2rem;
+    padding: .75rem;
+    width: 50%;
+    border-radius: .2rem;
+    border: none;
+    background-color: #ED1F50;
+
+    font-size: medium;
+}
