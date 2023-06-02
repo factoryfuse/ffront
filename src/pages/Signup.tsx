@@ -1,12 +1,8 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './LoginSignup.scss'
 import { Box, Button, TextField } from '@mui/material';
 import axios from 'axios';
-
-function SubmitSignup(email: string, password: string) {
-  console.log(`signup: ${email} ${password}`)
-}
 
 export default function Signup() {
   const [name, setName] = useState('');

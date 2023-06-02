@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import './Dashboard.scss'
-import { TextField, Box, Toolbar, IconButton, Typography } from '@mui/material'
 import AppBar from '../comps/AppBar';
 import axios from 'axios';
 import UploadButton from '../comps/UploadButton';
 import ViewContainer from '../comps/ViewContainer';
 
-
 export default function Dashboard() {
     const [name, setName] = React.useState('');
-    const [email, setEmail] = React.useState('');
+    const [_email, setEmail] = React.useState('');
 
     const {session_id} = useLocation().state;
     const InitDashboard = async () => { 
@@ -40,7 +38,7 @@ export default function Dashboard() {
 
             <div className="dashboard-grid">
                 <UploadButton dummy=''/>
-                <ViewContainer content_type='video'/>
+                <ViewContainer content_type='result'/>
             </div>
             
         </div>

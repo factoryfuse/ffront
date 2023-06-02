@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import socket from "./Socket";
 import "./ViewContainer.scss";
 
 interface ViewContainerProps {
@@ -15,9 +17,30 @@ function VideoContainer() {
     );
 }
 
-export default function ViewContainer(props: ViewContainerProps) {
+function ResultContainer(result_html: ArrayBuffer) {
 
-    const content = VideoContainer();
+    // const raw_html = atob(result_html)
+
+    return (
+        <div className="view-result">
+            <iframe srcDoc={new TextDecoder().decode(result_html)} className="view-result-iframe" />
+        </div>
+    )
+}
+
+export default function ViewContainer(_props: ViewContainerProps) {
+
+    const [content, setContent] = useState(VideoContainer());
+
+    useEffect(() => {
+        socket.addEventListener("message", async (e) => {
+            const data = await (e.data as Blob).arrayBuffer();
+
+            console.log(data)
+            
+            setContent(ResultContainer(data))
+        });
+    }, [])
 
     return (
         <div className="view-container">

@@ -1,4 +1,3 @@
-import React from "react";
 import "./UserView.scss";
 
 interface UserViewProps {
